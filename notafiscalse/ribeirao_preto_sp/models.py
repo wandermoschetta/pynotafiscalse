@@ -41,6 +41,7 @@ class ComplementoPrestador:
 class Tomador:
     '''
       Classe Tomador representando o cliente que está consumindo o serviço(s).
+      
     '''
 
     def __init__(self, cpf_cnpj, nome, logradouro, numero_logradouro, complemento, bairro, cidade, estado, cep, codigo_cidade_ibge, email, telefone):
