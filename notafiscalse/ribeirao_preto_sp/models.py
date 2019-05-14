@@ -4,7 +4,7 @@
 '''
  
 
-class Prestador():
+class Prestador:
     '''
       Classe Prestador representando a empresa que emite a nota fiscal.
     '''
@@ -25,7 +25,7 @@ class Prestador():
         self.telefone = telefone
         self.complemento_prestador = complemento_prestador
 
-class ComplementoPrestador():
+class ComplementoPrestador:
 	
     def __init__(self, natureza_operacao, incentivador_cultural, optante_simples_nacional, iss_retido, item_lista_servico, codigo_tributacao_municipio, caminho_certificado, senha_certificado):
         self.natureza_operacao = natureza_operacao 
@@ -38,7 +38,7 @@ class ComplementoPrestador():
         self.senha_certificado = senha_certificado
 
 
-class Tomador():
+class Tomador:
     '''
       Classe Tomador representando o cliente que está consumindo o serviço(s).
     '''
@@ -57,7 +57,7 @@ class Tomador():
        self.email = email
        self.telefone = self.telefone
 
-class ReciboNotaFiscal():
+class ReciboNotaFiscal:
     '''
     Recibo Provisório de Serviço(RPS)
     
@@ -82,7 +82,7 @@ class ReciboNotaFiscal():
         self.data_emissao_rps = data_emissao_rps
         self.situacao_lote_rps = situacao_lote_rps 
 
-class ItemNotaFiscal():
+class ItemNotaFiscal:
     '''
       Valores e tributos que compõe a nota fiscal de serviços eletrônica.
     '''
@@ -103,7 +103,7 @@ class ItemNotaFiscal():
         self.desconto_condicionado = desconto_condicionado
         self.valor_iss = valor_inss
 
-class NotaFiscal():
+class NotaFiscal:
     '''
 	Campos de dados que compõe parte principal da nota fiscal de serviços eletrônica.
 
@@ -130,7 +130,7 @@ class NotaFiscal():
         self.prestador = prestador
         self.tomador = tomador
 
-class MensagemRps():
+class MensagemRps:
     '''
       Mensagem de retorno de erros/avisos gerado no envio do recibo provisório da nota fiscal
 
