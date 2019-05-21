@@ -1,13 +1,13 @@
-''' 
+""" 
    Classes representando dados que compõe a Nota Fiscal de Serviços Eletrônico
 
-'''
+"""
  
 
 class Prestador:
-    '''
+    """
       Classe Prestador representando a empresa que emite a nota fiscal.
-    '''
+    """
     def __init__(self, cnpj, inscricao_municipal, razao_social, nome_fantasia, logradouro, numero_logradouro, complemento, bairro, cidade, estado, codigo_cidade_ibge, cep, email, telefone, complemento_prestador):
         self.cnpj = cnpj
         self.inscricao_municipal
@@ -39,10 +39,10 @@ class ComplementoPrestador:
 
 
 class Tomador:
-    '''
+    """
       Classe Tomador representando o cliente que está consumindo o serviço(s).
       
-    '''
+    """
 
     def __init__(self, cpf_cnpj, nome, logradouro, numero_logradouro, complemento, bairro, cidade, estado, cep, codigo_cidade_ibge, email, telefone):
        self.cpf_cnpj = cpf_cnpj
@@ -59,7 +59,7 @@ class Tomador:
        self.telefone = self.telefone
 
 class ReciboNotaFiscal:
-    '''
+    """
     Recibo Provisório de Serviço(RPS)
     
     status_rps : Código de status do RPS(1 – Normal, 2 – Cancelado).
@@ -71,7 +71,7 @@ class ReciboNotaFiscal:
     tipo_rps : Código de tipo de RPS(1 - RPS,2 – Nota Fiscal Conjugada (Mista),3 – Cupom).
     data_emissao_rps : Data Emissão do RPS(AAAA-MM-DD), campo obrigatório apenas para NFS-e geradas pela emissão de RPS.      
 	situacao_lote_rps : Código de situação de lote de RPS(1 – Não Recebido,2 – Não Processado,3 – Processado com Erro,4 – Processado com Sucesso). 
-    '''
+    """
     def __init__(self, status_rps, quantidade_rps, numero_rps, numero_lote, numero_protocolo, serie_rps, tipo_rps, data_emissao_rps, situacao_lote_rps):
         self.status_rps = status_rps
         self.quantidade_rps = quantidade_rps
@@ -84,9 +84,9 @@ class ReciboNotaFiscal:
         self.situacao_lote_rps = situacao_lote_rps 
 
 class ItemNotaFiscal:
-    '''
+    """
       Valores e tributos que compõe a nota fiscal de serviços eletrônica.
-    '''
+    """
     def __init__(self, valor_servico, valor_iss_retido, aliquota, valor_deducoes, valor_pis, valor_cofins, valor_inss, valor_ir, valor_csll, outras_retencoes, base_calculo, valor_liquido, desconto_incondicionado, desconto_condicionado,	valor_iss):
         self.valor_servico = valor_servico
         self.valor_iss_retido = valor_iss_retido
@@ -105,7 +105,7 @@ class ItemNotaFiscal:
         self.valor_iss = valor_inss
 
 class NotaFiscal:
-    '''
+    """
 	Campos de dados que compõe parte principal da nota fiscal de serviços eletrônica.
 
     numero_nfse : Número da Nota Fiscal de Serviço Eletrônica,
@@ -119,7 +119,7 @@ class NotaFiscal:
     recibo_nota_fiscal : Classe referenciando Recibo da Nota Fiscal. 
     prestador : Classe referenciando o Prestador de serviços/Empresa.
     tomador : Classe referenciando o Tomador de serviços/Cliente.    
-    '''
+    """
     def __init__(self, numero_nfse, data_emissao_nfse, codigo_verificacao, competencia, discriminacao, outras_informacoes, recibo_nota_fiscal, prestador, tomador):
         self.numero_nfse = numero_nfse
         self.data_emissao_nfse = data_emissao_nfse
@@ -132,12 +132,12 @@ class NotaFiscal:
         self.tomador = tomador
 
 class MensagemRps:
-    '''
+    """
       Mensagem de retorno de erros/avisos gerado no envio do recibo provisório da nota fiscal
 
       codigo : codigo correspondendo erro ou mensagem de retorno
       descricao : descrição da resposta do envio do recibo provisório
-    '''
+    """
     def __init__(self,codigo, descricao, recibo_nota_fiscal):
         self.codigo = codigo
         self.descricao = descricao
