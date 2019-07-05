@@ -26,7 +26,7 @@ class Prestador:
 
 class ComplementoPrestador:
 	
-    def __init__(self, natureza_operacao, incentivador_cultural, optante_simples_nacional, iss_retido, item_lista_servico, codigo_tributacao_municipio, caminho_certificado, senha_certificado):
+    def __init__(self, natureza_operacao, incentivador_cultural, optante_simples_nacional, iss_retido, item_lista_servico, codigo_tributacao_municipio, caminho_certificado, senha_certificado, url_webservice, url_endpoint_webservice):
         self.natureza_operacao = natureza_operacao 
         self.incentivador_cultural = incentivador_cultural
         self.optante_simples_nacional = optante_simples_nacional
@@ -35,7 +35,8 @@ class ComplementoPrestador:
         self.codigo_tributacao_municipio = codigo_tributacao_municipio
         self.caminho_certificado = caminho_certificado
         self.senha_certificado = senha_certificado
-
+        self.url_webservice = url_webservice
+        self.url_endpoint_webservice = url_endpoint_webservice
 
 class Tomador:
     """
