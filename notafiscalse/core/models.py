@@ -56,7 +56,7 @@ class Tomador:
        self.cep = cep
        self.codigo_cidade_ibge = codigo_cidade_ibge,
        self.email = email
-       self.telefone = self.telefone
+       self.telefone = telefone
 
 class ReciboNotaFiscal:
     """
@@ -120,7 +120,7 @@ class NotaFiscal:
     prestador : Classe referenciando o Prestador de serviços/Empresa.
     tomador : Classe referenciando o Tomador de serviços/Cliente.    
     """
-    def __init__(self, numero_nfse, data_emissao_nfse, codigo_verificacao, competencia, discriminacao, outras_informacoes, recibo_nota_fiscal, prestador, tomador):
+    def __init__(self, numero_nfse, data_emissao_nfse, codigo_verificacao, competencia, discriminacao, outras_informacoes, recibo_nota_fiscal, prestador, tomador, item_nota_fiscal):
         self.numero_nfse = numero_nfse
         self.data_emissao_nfse = data_emissao_nfse
         self.codigo_verificacao = codigo_verificacao
@@ -130,6 +130,7 @@ class NotaFiscal:
         self.recibo_nota_fiscal = recibo_nota_fiscal
         self.prestador = prestador
         self.tomador = tomador
+        self.item_nota_fiscal = item_nota_fiscal
 
 class MensagemRps:
     """
