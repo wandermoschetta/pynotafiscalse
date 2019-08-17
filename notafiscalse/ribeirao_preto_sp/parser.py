@@ -11,3 +11,6 @@ class SetupXml:
               
   def envelope_envia_lote_rps(self):
     return '{}'.format(self.cabecalho_envia_lote_rps())
+
+  def __repl__(self):
+    return 'setupxml: {}'.format(self.envelope_envia_lote_rps())
